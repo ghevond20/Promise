@@ -87,7 +87,40 @@ p2.then((value) => {
 
         </section>
 
+        <section>
+            <section>
+                <h2>Promise Bluebird</h2>
 
+                <small>
+                <a href='http://bluebirdjs.com/docs/getting-started.html' target="_blank">Bluebird</a>
+              </small>
+            </section>
+            <section>
+                <h2>Promise Each</h2>
+
+                  <pre><code>const items = ['one','two','3','4'];
+let reseult = []
+Promise.each(items, function(element) {
+  reseult.push(element+'1')
+}).then(function(res) {
+  console.log(res)
+  console.log(reseult)
+}); </code></pre>
+        <a href="https://jsfiddle.net/fu6fhjvw/5/" target="_blank"> Demo</a>
+            </section>
+            <section>
+                <h2>Promise Map</h2>
+
+                  <pre><code>const items = ['one','two','3','4'];
+Promise.map(items, function(element) {
+  return element+'1'
+}).then(function(res) {
+  console.log(res)
+});</code></pre>
+            <a href="https://jsfiddle.net/fu6fhjvw/7/" target="_blank"> Demo</a>
+            </section>
+
+        </section>
 
 
 
