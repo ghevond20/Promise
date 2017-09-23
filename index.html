@@ -100,9 +100,9 @@ p2.then((value) => {
 
                   <pre><code>const items = ['one','two','3','4'];
 let reseult = []
-Promise.each(items, function(element) {
+Promise.each(items, (element)=> {
   reseult.push(element+'1')
-}).then(function(res) {
+}).then((res) =>{
   console.log(res)
   console.log(reseult)
 }); </code></pre>
@@ -112,9 +112,9 @@ Promise.each(items, function(element) {
                 <h2>Promise Map</h2>
 
                   <pre><code>const items = ['one','two','3','4'];
-Promise.map(items, function(element) {
+Promise.map(items, (element) =>{
   return element+'1'
-}).then(function(res) {
+}).then((res)=> {
   console.log(res)
 });</code></pre>
             <a href="https://jsfiddle.net/fu6fhjvw/7/" target="_blank"> Demo</a>
@@ -122,8 +122,60 @@ Promise.map(items, function(element) {
 
         </section>
 
+        <section>
+            <section>
+                <h2>Filter</h2>
+
+                <small>
+              The filter() method creates a new array with all elements that pass the test implemented by the provided function.
+              </small>
+            </section>
+            <section>
+                <h2>Filter Example</h2>
+
+                  <pre><code>var words = [
+    "spray",
+    "limit",
+    "elite",
+    "exuberant",
+    "destruction",
+    "present"
+    ];
+var longWords = words.filter(word => word.length > 6);</code></pre>
+        <a href="https://jsfiddle.net/hw5pdr7d/" target="_blank"> Demo</a>
+            </section>
 
 
+        </section>
+
+        <section>
+            <section>
+                <h2>Reduce</h2>
+
+                <small>
+              The reduce() method applies a function against an accumulator and each element in the array (from left to right) to reduce it to a single value.
+              </small>
+            </section>
+            <section>
+                <h2>Reduce Example</h2>
+
+                  <pre><code>// create an array
+var numbers = [0, 1, 2, 3];
+
+/* call reduce() on the array, passing a callback
+that adds all the values together */
+var result = numbers.reduce(function(accumulator, currentValue) {
+    return accumulator + currentValue;
+});
+
+// log the result
+console.log(result);
+// expected output: 6</code></pre>
+        <a href="https://jsfiddle.net/73mmcbod/" target="_blank"> Demo</a>
+            </section>
+
+
+        </section>
         <section style="text-align: left;">
             <h1>THE END</h1>
 
